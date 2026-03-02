@@ -4,11 +4,5 @@
 
 [build.environment]
   NODE_VERSION = "20"
-
-[[redirects]]
-  from = "/*"
-  to = "/index.html"
-  status = 200
-
-[context.production.environment]
-  NEXT_TELEMETRY_DISABLED = "1"
+  # 清除缓存
+  NETLIFY_CACHE_CLEAN = "true"
