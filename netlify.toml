@@ -1,8 +1,0 @@
-[build]
-  command = "npm run build"
-  publish = "out"
-
-[build.environment]
-  NODE_VERSION = "20"
-  # 清除缓存
-  NETLIFY_CACHE_CLEAN = "true"
