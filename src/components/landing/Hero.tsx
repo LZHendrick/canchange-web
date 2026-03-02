@@ -2,7 +2,7 @@
 
 import { motion, useReducedMotion } from 'framer-motion';
 import Link from 'next/link';
-import { Sparkles, ArrowRight } from 'lucide-react';
+import { Cat, ArrowRight } from 'lucide-react';
 
 /**
  * CanChange 首页 Hero Banner
@@ -82,16 +82,22 @@ function HardwareDevice() {
           {/* 品牌标识区域 */}
           <div className="absolute inset-0 flex items-center justify-center">
             <div className="text-center">
-              {/* Logo */}
+              {/* Logo - 小熊猫 */}
               <motion.div
-                className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-orange-500 to-amber-600 flex items-center justify-center shadow-lg"
+                className="w-16 h-16 sm:w-20 sm:h-20 mx-auto mb-4 rounded-2xl bg-gradient-to-br from-orange-500 to-amber-600 flex items-center justify-center shadow-lg border-2 border-white/20"
                 whileHover={shouldReduceMotion ? {} : { scale: 1.05 }}
               >
-                <Sparkles className="w-8 h-8 sm:w-10 sm:h-10 text-white" />
+                {/* 熊猫耳朵和脸 */}
+                <div className="relative">
+                  <Cat className="w-8 h-8 sm:w-10 sm:h-10 text-white" strokeWidth={2.5} />
+                  {/* 熊猫耳朵 */}
+                  <div className="absolute -top-1 -left-0.5 w-2.5 h-2.5 bg-white rounded-full opacity-90" />
+                  <div className="absolute -top-1 -right-0.5 w-2.5 h-2.5 bg-white rounded-full opacity-90" />
+                </div>
               </motion.div>
               
               {/* 品牌名 */}
-              <h3 className="text-zinc-200 font-bold text-base sm:text-lg tracking-tight">灿橙</h3>
+              <h3 className="text-zinc-200 font-bold text-base sm:text-lg tracking-tight">小熊猫</h3>
               <p className="text-zinc-500 text-xs tracking-wider">CanChange</p>
               <p className="text-zinc-600 text-[10px] mt-1">AI 企业主机</p>
             </div>
